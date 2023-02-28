@@ -133,3 +133,9 @@ footer a {
 .yellow {
 	color: var(--yellow);
 }
+
+@media screen and (max-width: 600px) {
+	.container {
+		flex-direction: column;
+	}
+}
