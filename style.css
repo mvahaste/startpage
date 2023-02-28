@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500;600&display=swap");
 
 :root {
-	--text: #d6d6d6;
+	--title: #61aded;
+	--text: #cccccc;
 	--background: #202124;
-	--input: #1b1c1f;
-	--footer: rgba(255, 255, 255, 0.175);
-	--search-width: 7ch;
+	--footer: #ffffff2d;
+
+	--teal: #54b5c1;
+	--blue: #5486fc;
+	--light-blue: #61aded;
+	--pink: #c874da;
+	--green: #97c47d;
+	--soft-red: #e16d75;
+	--red: #bf5147;
+	--brown: #d19b69;
+	--yellow: #e5c27f;
 }
 
 * {
@@ -24,19 +33,19 @@ body {
 	overflow: hidden;
 }
 
+a {
+	font-weight: 300;
+}
+
 .container a {
 	text-decoration: underline solid transparent;
 	color: var(--text);
-	transition: all ease 0.2s;
+	transition: all ease 0.15s;
 }
 
 .container a:hover {
 	text-decoration: underline solid var(--text);
 }
-
-/* a span:hover {
-	text-transform: uppercase;
-} */
 
 input {
 	background-color: var(--input);
@@ -49,20 +58,25 @@ input {
 	font-size: 1em;
 	text-align: center;
 	margin-bottom: 5px;
-	transition: all ease 0s;
 	caret-color: var(--text);
 }
 
 .container {
-	/* background-color: rgba(255, 255, 255, 0.1); */
-	width: 400px;
-	height: 300px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	gap: 60px;
+}
+
+.container div {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	gap: 5px;
+	gap: 3px;
+}
+
+h4 {
+	margin-bottom: 3px;
+	filter: grayscale(0.25);
 }
 
 footer {
@@ -82,4 +96,40 @@ footer a {
 ::selection {
 	background-color: var(--text);
 	color: var(--background);
+}
+
+.blue {
+	color: var(--blue);
+}
+
+.teal {
+	color: var(--teal);
+}
+
+.light-blue {
+	color: var(--light-blue);
+}
+
+.pink {
+	color: var(--pink);
+}
+
+.green {
+	color: var(--green);
+}
+
+.soft-red {
+	color: var(--soft-red);
+}
+
+.red {
+	color: var(--red);
+}
+
+.brown {
+	color: var(--brown);
+}
+
+.yellow {
+	color: var(--yellow);
 }
