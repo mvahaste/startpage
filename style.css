@@ -24,10 +24,6 @@ body {
 	overflow: hidden;
 }
 
-p {
-	color: var(--text);
-}
-
 .container a {
 	text-decoration: underline solid transparent;
 	color: var(--text);
@@ -38,9 +34,9 @@ p {
 	text-decoration: underline solid var(--text);
 }
 
-a span:hover {
-	/* text-transform: uppercase; */
-}
+/* a span:hover {
+	text-transform: uppercase;
+} */
 
 input {
 	background-color: var(--input);
