@@ -8,6 +8,6 @@ function updateSearchWidth() {
 
 function searchGoogle() {
 	if (search.value.trim() !== "") {
-		window.location.href = "https://www.google.com/search?q=" + search.value.trim();
+		window.location.href = "https://duckduckgo.com/?q=" + search.value.trim();
 	}
 }
