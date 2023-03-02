@@ -69,7 +69,6 @@ input {
 	font-size: var(--text-size);
 	text-align: center;
 	font-weight: 400;
-	margin-bottom: 5px;
 	caret-color: var(--text);
 	transition: all ease 0.15s;
 }
@@ -95,11 +94,11 @@ input:focus {
 .links div {
 	display: flex;
 	flex-direction: column;
-	gap: 3px;
+	gap: 2px;
 }
 
 h4 {
-	margin-bottom: 3px;
+	margin-bottom: 0px;
 	filter: grayscale(0.35);
 	font-size: var(--title-size);
 }
@@ -121,7 +120,6 @@ footer a {
 .cat {
 	color: #cccccc;
 	width: min-content;
-	/* margin-bottom: 3px; */
 }
 
 @keyframes fadeIn {
