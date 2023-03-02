@@ -44,7 +44,7 @@ body {
 }
 
 a {
-	font-weight: 400;
+	font-weight: 250;
 }
 
 .container a {
@@ -68,7 +68,7 @@ input {
 	outline: none;
 	font-size: var(--text-size);
 	text-align: center;
-	font-weight: 400;
+	font-weight: 250;
 	caret-color: var(--text);
 	transition: all ease-in-out 0.15s;
 }
