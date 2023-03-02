@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 :root {
 	--title: #61aded;
 	--text: #cccccc;
 	--background: #202124;
+	--input: #292a2e;
+	--placeholder: #757575;
 	--footer: #ffffff2d;
+
+	--text-size: 12pt;
+	--title-size: 12pt;
+	--footer-size: 9pt;
 
 	--teal: #54b5c1;
 	--blue: #5486fc;
@@ -29,18 +36,22 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
-	height: 100vh;
+	height: 92.5vh;
 	overflow: hidden;
+	animation: fadeIn ease-in-out 0.35s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 a {
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .container a {
 	text-decoration: underline solid transparent;
 	color: var(--text);
 	transition: all ease 0.15s;
+	font-size: var(--text-size);
 }
 
 .container a:hover {
@@ -48,27 +59,40 @@ a {
 }
 
 input {
-	background-color: var(--input);
+	background-color: transparent;
 	padding: 7px;
 	width: var(--search-width);
 	border-radius: 7px;
 	color: var(--text);
 	border: none;
 	outline: none;
-	font-size: 1em;
+	font-size: var(--text-size);
 	text-align: center;
+	font-weight: 400;
 	margin-bottom: 5px;
 	caret-color: var(--text);
+	transition: all ease 0.15s;
+}
+
+input:focus {
+	background-color: var(--input);
 }
 
 .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.links {
 	display: flex;
 	flex-direction: row;
 	text-align: center;
 	gap: 60px;
 }
 
-.container div {
+.links div {
 	display: flex;
 	flex-direction: column;
 	gap: 3px;
@@ -77,6 +101,7 @@ input {
 h4 {
 	margin-bottom: 3px;
 	filter: grayscale(0.35);
+	font-size: var(--title-size);
 }
 
 footer {
@@ -84,13 +109,28 @@ footer {
 	bottom: 3px;
 	right: 5px;
 	text-align: center;
-	font-size: 0.8em;
+	font-size: var(--footer-size);
 	font-weight: 100;
 }
 
 footer a {
 	text-decoration: none;
 	color: var(--footer);
+}
+
+.cat {
+	color: #cccccc;
+	width: min-content;
+	margin-bottom: 3px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 ::selection {
@@ -135,7 +175,20 @@ footer a {
 }
 
 @media screen and (max-width: 600px) {
-	.container {
+	body {
+		height: 92.5vh;
+	}
+
+	input {
+		display: none;
+	}
+
+	.cat {
+		display: none;
+	}
+
+	.links {
 		flex-direction: column;
+		gap: 40px;
 	}
 }
