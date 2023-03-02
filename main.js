@@ -9,7 +9,8 @@ fetch("./cats.json")
 		cats = data.cats;
 	})
 	.then(() => {
-		cat.innerHTML = cats[Math.floor(Math.random() * cats.length)];
+		var index = Math.floor(Math.random() * cats.length);
+		cat.innerHTML = cats[index];
 	});
 
 // Search with the enter key
