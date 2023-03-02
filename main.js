@@ -15,7 +15,7 @@ fetch("./cats.json")
 
 // Search with the enter key
 search.addEventListener("keyup", function (event) {
-	if (event.key == "Enter") {
+	if (event.key == "Enter" && search.value.trim() != "") {
 		if (validURL(search.value)) {
 			openURL("http://" + search.value);
 		} else {
