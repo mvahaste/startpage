@@ -17,6 +17,8 @@ search.addEventListener("keyup", function (event) {
 		if (search.value.substring(0, 2) == "r/") {
 			var subreddit = search.value.substring(2);
 			openURL("https://reddit.com/r/" + subreddit);
+		} else if (search.value.substring(0, 2) == "y:") {
+			openURL("https://youtube.com/results?search_query=" + search.value.substring(2));
 		} else if (validURL(search.value)) {
 			openURL("http://" + search.value);
 		} else {
