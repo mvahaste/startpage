@@ -15,11 +15,32 @@ fetch("./cats.json")
 // Search with the enter key
 search.addEventListener("keyup", function (event) {
 	if (event.key == "Enter") {
-		if (search.value) dSearch(search.value);
+		if (validURL(search.value)) {
+			openURL("http://" + search.value);
+		} else {
+			dSearch(search.value);
+		}
 	}
 });
 
 // Search DuckDuckGo
 function dSearch(query) {
 	window.location.href = "https://duckduckgo.com/?q=" + query;
+}
+
+function openURL(url) {
+	window.location.href = url;
+}
+
+function validURL(str) {
+	var pattern = new RegExp(
+		"^(https?:\\/\\/)?" + // protocol
+			"((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+			"((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+			"(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+			"(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+			"(\\#[-a-z\\d_]*)?$",
+		"i"
+	); // fragment locator
+	return !!pattern.test(str);
 }
