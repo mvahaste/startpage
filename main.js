@@ -15,7 +15,7 @@ fetch("./cats.json")
 // Search with the enter key
 search.addEventListener("keyup", function (event) {
 	if (event.key == "Enter") {
-		dSearch(search.value);
+		if (search.value) dSearch(search.value);
 	}
 });
 
