@@ -2,7 +2,6 @@ var search = document.getElementById("search");
 var cat = document.getElementById("cat");
 var cats = [];
 
-// Get the cats from the JSON file
 fetch("./cats.json")
 	.then((response) => response.json())
 	.then((data) => {
@@ -13,7 +12,6 @@ fetch("./cats.json")
 		cat.innerHTML = cats[index];
 	});
 
-// Search with the enter key
 search.addEventListener("keyup", function (event) {
 	if (event.key == "Enter" && search.value.trim() != "") {
 		if (search.value.substring(0, 2) == "r/") {
@@ -27,7 +25,6 @@ search.addEventListener("keyup", function (event) {
 	}
 });
 
-// Search DuckDuckGo
 function dSearch(query) {
 	window.location.href = "https://duckduckgo.com/?q=" + query;
 }

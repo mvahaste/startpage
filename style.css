@@ -74,9 +74,7 @@ input {
 	caret-color: var(--text);
 	transition: all ease-in-out 0.15s;
 	background-color: var(--input);
-}
-
-input:focus {
+	margin-bottom: 5px;
 }
 
 .container {
