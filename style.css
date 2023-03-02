@@ -120,6 +120,7 @@ footer a {
 .cat {
 	color: #cccccc;
 	width: min-content;
+	font-weight: 250;
 }
 
 @keyframes fadeIn {
