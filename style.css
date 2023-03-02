@@ -121,7 +121,7 @@ footer a {
 .cat {
 	color: #cccccc;
 	width: min-content;
-	margin-bottom: 3px;
+	/* margin-bottom: 3px; */
 }
 
 @keyframes fadeIn {
