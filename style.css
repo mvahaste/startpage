@@ -104,7 +104,7 @@ h4 {
 }
 
 .cat {
-	color: #cccccc;
+	color: var(--text);
 	width: min-content;
 	font-weight: 600;
 }
