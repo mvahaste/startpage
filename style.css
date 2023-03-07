@@ -3,24 +3,24 @@
 
 :root {
 	--title: #61aded;
-	--text: #cccccc;
-	--background: #202124;
-	--input: #292a2e;
-	--placeholder: #757575;
+	--text: #cdd6f4;
+	--background: #1e1e2e;
+	--input: #313244;
+	--placeholder: #6c7086;
 
 	--text-size: 12pt;
 	--title-size: 12pt;
 	--footer-size: 9pt;
 
 	--teal: #54b5c1;
-	--blue: #5486fc;
+	--blue: #89b4fa;
 	--light-blue: #61aded;
-	--pink: #c874da;
-	--green: #97c47d;
-	--soft-red: #e16d75;
+	--pink: #cba6f7;
+	--green: #a6e3a1;
+	--soft-red: #f38ba8;
 	--red: #bf5147;
-	--brown: #d19b69;
-	--yellow: #e5c27f;
+	--brown: #fab387;
+	--yellow: #f9e2af;
 }
 
 * {
@@ -121,6 +121,12 @@ h4 {
 ::selection {
 	background-color: var(--text);
 	color: var(--background);
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: var(--placeholder);
+	opacity: 1; /* Firefox */
 }
 
 .blue {
